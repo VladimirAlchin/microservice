@@ -3,15 +3,15 @@ kind: Deployment
 metadata:
   labels:
     app: pgs
-  name: delpoy
+  name: deploy
   namespace: pgs
 spec:
   replicas: 1
   strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 25%
+    type: Recreate
+#    rollingUpdate:
+#      maxSurge: 1
+#      maxUnavailable: 25%
   selector:
     matchLabels:
       app: pgs
