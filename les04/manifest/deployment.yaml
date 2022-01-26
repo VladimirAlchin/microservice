@@ -33,10 +33,11 @@ spec:
           - name: PGDATA
             value: /var/lib/postgresql/data/pgdata
           - name: POSTGRES_USER
-            valueFrom:
-              secretKeyRef:
-                name: secret
-                key: POSTGRES_USER
+            value: testuser
+#            valueFrom:
+#              secretKeyRef:
+#                name: secret
+#                key: POSTGRES_USER
           - name: POSTGRES_PASSWORD
             valueFrom:
               secretKeyRef:

@@ -2,12 +2,12 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   namespace: pgs
-  name: pv
+  name: pv2
 spec:
   capacity:
     storage: 10Gi
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: /pv1
+    path: /mnt/c/Users/vs.alchin/PycharmProjects/microservice/les04
   storageClassName: local
